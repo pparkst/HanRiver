@@ -1,7 +1,27 @@
-from MySQLdb import _mysql
+#from MySQLdb import _mysql
+#db = _mysql.connect(host="", port=, user="", passwd="", db="")
+import MySQLdb
 
-db = _mysql.connect("", "", "", "")
-cur = db.cursor()
-cur.execute("SELECT sysdate()")
-res = cur.fetchall()
-print(res)
+RDS_HOST = "ap-northeast-2.rds.amazonaws.com"
+RDS_USER = ""
+RDS_PASSWD = ""
+RDS_PORT = 0
+
+def dbConn(schema):
+    db = MySQLdb.connect(host=RDS_HOST, port=RDS_PORT, user=RDS_USER, passwd=RDS_PASSWD, db=schema, charset='utf8')
+    return db
+
+def InsertHanRiverData(dataDic):
+    try:
+        db = dbConn("pparkst_db")
+
+        cur = db.cursor()
+        table = "tbl_hanRiverInfo"
+        columns = ",". join(dataDic.keys())
+        placeHolders = ",".join(str(_[1]) for _ in dataDic.items())
+        query = "INSERT INTO %s (%s) VALUES (%s)" % (table, columns, placeHolders)
+        cur.execute(query)
+        db.commit()
+    finally:
+        print("!INSERT DATA!")
+        db.close()
