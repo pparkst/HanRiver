@@ -2,10 +2,10 @@
 #db = _mysql.connect(host="", port=, user="", passwd="", db="")
 import MySQLdb
 
-RDS_HOST = "ap-northeast-2.rds.amazonaws.com"
+RDS_HOST = ""
 RDS_USER = ""
 RDS_PASSWD = ""
-RDS_PORT = 0
+RDS_PORT = 
 
 def dbConn(schema):
     db = MySQLdb.connect(host=RDS_HOST, port=RDS_PORT, user=RDS_USER, passwd=RDS_PASSWD, db=schema, charset='utf8')
