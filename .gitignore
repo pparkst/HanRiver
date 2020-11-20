@@ -61,7 +61,7 @@ Temporary Items
 __pycache__/
 *.py[cod]
 *$py.class
-**/dbcon.py
+database/dbcon.py
 
 # C extensions
 *.so
@@ -296,10 +296,13 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
-**/application.properties
+**/*.properties
+resources/*.properties
+
 
 
 ## TEST ##
 resources/*.txt
+
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,java,gradle,swift
