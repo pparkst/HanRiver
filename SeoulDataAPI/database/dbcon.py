@@ -2,7 +2,7 @@
 #db = _mysql.connect(host="", port=, user="", passwd="", db="")
 import MySQLdb
 
-RDS_HOST = ""
+RDS_HOST = "r"
 RDS_USER = ""
 RDS_PASSWD = ""
 RDS_PORT = 

@@ -23,7 +23,7 @@ def requstAPI(path, query, method, data={}):
 
     if 'GET' == method:
         req = http.request(method, url)
-        req.auto_close = False
+        req.auto_close = True
     return req.data
 
 def dataFormat(result_API):
@@ -46,6 +46,7 @@ def run():
     query = 'xml/WPOSInformationTime/1/5/%s' % nowDate
     
     result = requstAPI(query, '', 'GET')
+    print(result)
     data = dataFormat(result)
     result_Code = data['WPOSInformationTime']['RESULT']['CODE']
 
