@@ -300,7 +300,6 @@ gradle-app.setting
 
 
 ## TEST ##
-**/test.txt
-test.txt
+resources/*.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,java,gradle,swift
