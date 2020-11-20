@@ -3,7 +3,7 @@
 import MySQLdb
 
 RDS_HOST = ""
-RDS_USER = ""
+RDS_USER = "sa"
 RDS_PASSWD = ""
 RDS_PORT = 
 
