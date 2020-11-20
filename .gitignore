@@ -298,6 +298,9 @@ gradle-app.setting
 **/build/
 **/application.properties
 
+
+## TEST ##
 **/test.txt
+test.txt
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,java,gradle,swift
