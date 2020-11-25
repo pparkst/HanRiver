@@ -13,6 +13,8 @@
 		267B847D2567C64D00D424AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267B847C2567C64D00D424AE /* Assets.xcassets */; };
 		267B84802567C64D00D424AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267B847F2567C64D00D424AE /* Preview Assets.xcassets */; };
 		267B84832567C64D00D424AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B84812567C64D00D424AE /* LaunchScreen.storyboard */; };
+		267B848D256A90BC00D424AE /* HanRiverInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848C256A90BC00D424AE /* HanRiverInfoService.swift */; };
+		267B848F256A962F00D424AE /* HanRiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848E256A962F00D424AE /* HanRiver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		267B847F2567C64D00D424AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		267B84822567C64D00D424AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		267B84842567C64D00D424AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267B848C256A90BC00D424AE /* HanRiverInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiverInfoService.swift; sourceTree = "<group>"; };
+		267B848E256A962F00D424AE /* HanRiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,9 @@
 		267B84752567C64C00D424AE /* HanRiverIOS */ = {
 			isa = PBXGroup;
 			children = (
+				267B8490256EACDB00D424AE /* HanRivers */,
+				267B848B256A908000D424AE /* Models */,
+				267B848A256A906900D424AE /* Services */,
 				267B84762567C64C00D424AE /* AppDelegate.swift */,
 				267B84782567C64C00D424AE /* SceneDelegate.swift */,
 				267B847A2567C64C00D424AE /* ContentView.swift */,
@@ -73,6 +80,29 @@
 				267B847F2567C64D00D424AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		267B848A256A906900D424AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				267B848C256A90BC00D424AE /* HanRiverInfoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		267B848B256A908000D424AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				267B848E256A962F00D424AE /* HanRiver.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		267B8490256EACDB00D424AE /* HanRivers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HanRivers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				267B84772567C64C00D424AE /* AppDelegate.swift in Sources */,
+				267B848F256A962F00D424AE /* HanRiver.swift in Sources */,
+				267B848D256A90BC00D424AE /* HanRiverInfoService.swift in Sources */,
 				267B84792567C64C00D424AE /* SceneDelegate.swift in Sources */,
 				267B847B2567C64C00D424AE /* ContentView.swift in Sources */,
 			);

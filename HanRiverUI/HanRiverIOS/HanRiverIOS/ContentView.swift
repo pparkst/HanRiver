@@ -12,15 +12,23 @@ struct HanRiverResponse: Codable {
     var result: HanRiverInfo
 }
 
-struct HanRiverInfo: Codable {
-    var no_ : Int
-    var name: String
-    var temperature: Int
-}
+//struct HanRiverInfo: Codable {
+//    var no_ : Int
+//    var name: String
+//    var temperature: Int
+//}
 
 struct ContentView: View {
     //@State var result: HanRiverInfo =  HanRiverInfo(no_: 1, name: "", temperature: 0)
-    @State private var result: HanRiverInfo?
+    @State var result: HanRiverInfo?
+    @State private var test = ""
+    
+    func dataLoad(model: HanRiverInfo) {
+        //DispatchQueue.main.async {
+        print(model.temperature)
+        self.result = model
+        //}
+    }
     
     var body: some View {
         
@@ -28,31 +36,33 @@ struct ContentView: View {
             Text("\(result?.temperature ?? 0)")
                 .font(.headline)
         }
-        .onAppear(perform: loadData)
+        .onAppear(perform: getHanRiverInfo)
     }
     
-    func loadData(){
-        guard let url = URL(string: "http://localhost:9090/hanRiverById/29") else{
-            print("Invalid URL")
-            return
-        }
-        
-        let request = URLRequest(url: url)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                //print(data)
-                if let decodedResponse = try? JSONDecoder().decode(HanRiverInfo.self, from: data) {
-                    print(decodedResponse)
-                    DispatchQueue.main.async {
-                        self.result = decodedResponse
-                    }
-                    return
-                }
-            }
-            print("fatch ERROR")
-        }.resume()
-    }
+//    func loadData(){
+//        guard let url = URL(string: "http://localhost:9090/hanRiverById/29") else{
+//            print("Invalid URL")
+//            return
+//        }
+//
+//        let request = URLRequest(url: url)
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            if let data = data {
+//                //print(data)
+//                if let decodedResponse = try? JSONDecoder().decode(HanRiverInfo.self, from: data) {
+//                    print(decodedResponse)
+//                    DispatchQueue.main.async {
+//                        self.result = decodedResponse
+//                    }
+//                    return
+//                }
+//            }
+//            print("fatch ERROR")
+//        }.resume()
+//    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -60,3 +70,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
