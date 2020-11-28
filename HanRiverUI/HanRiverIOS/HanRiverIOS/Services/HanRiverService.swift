@@ -60,7 +60,7 @@ func loadData<T: Codable>(url: String, model: T.Type) {
                     print(decodedResponse)
                     //ContentView.result = decodedResponse as? HanRiverInfo
                     //result = decodedResponse
-                    ContentView().dataLoad(model: decodedResponse as! HanRiverInfo)
+                    //ContentView().dataLoad(model: decodedResponse as! HanRiverInfo)
                     //ContentView(res: decodedResponse as! HanRiverInfo)
                     //ContentView(result: decodedResponse)
                 }

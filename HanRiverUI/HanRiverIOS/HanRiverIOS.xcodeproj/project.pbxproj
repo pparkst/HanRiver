@@ -84,7 +84,6 @@
 			children = (
 				26242F562572A77600EDDF9C /* Context */,
 				26242F502572939B00EDDF9C /* Scene */,
-				267B8490256EACDB00D424AE /* HanRivers */,
 				267B848B256A908000D424AE /* Model */,
 				267B848A256A906900D424AE /* Services */,
 				267B84762567C64C00D424AE /* AppDelegate.swift */,
@@ -121,13 +120,6 @@
 				267B848E256A962F00D424AE /* HanRiver.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		267B8490256EACDB00D424AE /* HanRivers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HanRivers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

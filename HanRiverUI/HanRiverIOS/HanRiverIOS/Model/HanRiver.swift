@@ -20,11 +20,6 @@ class HanRiverInfo: Identifiable, ObservableObject, Codable {
     }
     
     init() { }
-//    init (no_: Int, name: String, temperature: Int) {
-//        self.no_ = no_
-//        self.name = name
-//        self.temperature = temperature
-//    }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

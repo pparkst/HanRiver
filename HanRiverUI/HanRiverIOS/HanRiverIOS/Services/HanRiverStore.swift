@@ -15,24 +15,25 @@ class HanRiverStore: ObservableObject {
         hanRiverInfo = HanRiverInfo()
     }
     
-    func loadData<T: Codable>(model: T.Type) {
-        let url = "http://localhost:9090/hanRiverById/29"
-        let data = urlSessionData(url: url)
-        if data.count > 0 {
-            if let decodedResponse = try? JSONDecoder().decode(model.self, from: data) {
-                print(decodedResponse)
-            }
+    func loadData() {
+        guard let url = URL(string: "\("http://localhost:9090/hanRiverById/29")") else {
+            print("Invalid URL")
+            return
         }
-    }
-    
-    
-    func insert () {
         
-    }
-    func update () {
+        let request = URLRequest(url: url)
         
-    }
-    func delete() {
-        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                if let decodedResponse = try? JSONDecoder().decode(HanRiverInfo.self, from: data) {
+                    print(decodedResponse.name)
+                    DispatchQueue.main.async {
+                        self.hanRiverInfo = decodedResponse
+                    }
+                    return
+                }
+            }
+            print("data nil")
+        }.resume()
     }
 }

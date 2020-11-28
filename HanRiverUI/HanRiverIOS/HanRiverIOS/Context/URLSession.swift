@@ -10,17 +10,18 @@ import Foundation
 
 func urlSessionData(url: String) -> Data {
     var res = Data()
-    guard let url = URL(string: "\(url)") else{
+    guard let url = URL(string: "\(url)") else {
         return res
     }
     
     let request = URLRequest(url: url)
     URLSession.shared.dataTask(with: request) { data, response, error in
         if let data = data {
-            res = data
+                res = data
         }
-        print("DATA NIL")
+        print("data nil")
     }.resume()
+    print("out Session")
     return res
 }
 
