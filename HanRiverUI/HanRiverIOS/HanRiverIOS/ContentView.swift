@@ -20,23 +20,27 @@ struct HanRiverResponse: Codable {
 
 struct ContentView: View {
     //@State var result: HanRiverInfo =  HanRiverInfo(no_: 1, name: "", temperature: 0)
-    @State var result: HanRiverInfo?
+    @State private var result: HanRiverInfo?
     @State private var test = ""
+    
+//    init(res: HanRiverInfo) {
+//        self.result = State(initialValue: res)
+//    }
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("\(self.result?.temperature ?? 0)")
+            //Text("\(result.temperature)")
+                .font(.headline)
+        }
+        .onAppear(perform: getHanRiverInfo)
+    }
     
     func dataLoad(model: HanRiverInfo) {
         //DispatchQueue.main.async {
         print(model.temperature)
+        //print(model)
         self.result = model
         //}
-    }
-    
-    var body: some View {
-        
-        VStack(alignment: .leading) {
-            Text("\(result?.temperature ?? 0)")
-                .font(.headline)
-        }
-        .onAppear(perform: getHanRiverInfo)
     }
     
 //    func loadData(){
@@ -67,6 +71,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        //ContentView(res: HanRiverInfo(no_: 1, name: "", temperature: 11))
         ContentView()
     }
 }

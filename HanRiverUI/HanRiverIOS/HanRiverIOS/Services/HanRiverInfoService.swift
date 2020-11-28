@@ -54,10 +54,12 @@ func loadData<T: Codable>(url: String, model: T.Type) {
             print(data)
             if let decodedResponse = try? JSONDecoder().decode(model.self, from: data) {
                DispatchQueue.main.async {
+                    
                     print(decodedResponse)
                     //ContentView.result = decodedResponse as? HanRiverInfo
                     //result = decodedResponse
-                    //ContentView().dataLoad(model: decodedResponse as! HanRiverInfo)
+                    ContentView().dataLoad(model: decodedResponse as! HanRiverInfo)
+                    //ContentView(res: decodedResponse as! HanRiverInfo)
                     //ContentView(result: decodedResponse)
                 }
                 return
