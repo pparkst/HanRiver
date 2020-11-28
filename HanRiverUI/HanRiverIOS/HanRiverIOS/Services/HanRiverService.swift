@@ -12,6 +12,7 @@ import SwiftUI
 
 //let A: HanRiverInfo = HanRiverInfo(no_: 1, name: "", temperature: 0)
 
+
 func loadData<T: Codable>(url: String, model: T.Type) {
     print("loadData", url)
     //let defaultSession  = URLSession(configuration: .default)
@@ -52,6 +53,7 @@ func loadData<T: Codable>(url: String, model: T.Type) {
         print("URLSession")
         if let data = data {
             print(data)
+            print(data.count)
             if let decodedResponse = try? JSONDecoder().decode(model.self, from: data) {
                DispatchQueue.main.async {
                     

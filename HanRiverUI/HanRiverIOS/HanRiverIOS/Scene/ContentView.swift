@@ -8,37 +8,30 @@
 
 import SwiftUI
 
-struct HanRiverResponse: Codable {
-    var result: HanRiverInfo
-}
-
-//struct HanRiverInfo: Codable {
-//    var no_ : Int
-//    var name: String
-//    var temperature: Int
-//}
-
 struct ContentView: View {
-    //@State var result: HanRiverInfo =  HanRiverInfo(no_: 1, name: "", temperature: 0)
+    @EnvironmentObject var store: HanRiverStore
+
     @State private var result: HanRiverInfo?
     @State private var test = ""
     
-//    init(res: HanRiverInfo) {
-//        self.result = State(initialValue: res)
-//    }
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(self.result?.temperature ?? 0)")
-            //Text("\(result.temperature)")
-                .font(.headline)
-        }
-        .onAppear(perform: getHanRiverInfo)
+//        VStack(alignment: .leading) {
+//            Text("\(self.result?.temperature ?? 0)")
+//            //Text("\(result.temperature)")
+//                .font(.headline)
+//        }
+//        .onAppear(perform: getHanRiverInfo)
+        //.onAppear()
+        
+        Text("\(store.hanRiverInfo.temperature)")
+            .onAppear(perform: getHanRiverInfo)
+            //.onAppear(perform: store.)
     }
     
     func dataLoad(model: HanRiverInfo) {
         //DispatchQueue.main.async {
-        print(model.temperature)
-        //print(model)
+        //print(model.temperature)
+        print("\(model.no_) " + model.name + " \(model.temperature)")
         self.result = model
         //}
     }
@@ -73,6 +66,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         //ContentView(res: HanRiverInfo(no_: 1, name: "", temperature: 11))
         ContentView()
+        .environmentObject(HanRiverStore())
     }
 }
 
