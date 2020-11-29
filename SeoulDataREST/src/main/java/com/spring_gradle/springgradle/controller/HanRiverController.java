@@ -17,7 +17,7 @@ public class HanRiverController {
     // @DeleteMapping("/delete/{id}")
     
     @GetMapping("/hanRiverById/{id}")
-    public HanRiver findHanRiverById(@PathVariable int id)
+    public HanRiver findHanRiverById(@PathVariable Long id)
     {
         return service.getHanRiverById(id);
     }
@@ -31,5 +31,11 @@ public class HanRiverController {
     public List<HanRiver> findHanRiverAll()
     {
         return service.getHanRiverInfos();
+    }
+
+    @GetMapping("/hanRiverFindLatest")
+    public HanRiver findHanRiverTopData()
+    {
+        return service.getHanRiverLatestData();
     }
 }
