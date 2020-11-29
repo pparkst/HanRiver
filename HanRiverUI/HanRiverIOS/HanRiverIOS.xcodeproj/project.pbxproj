@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26242F532572A01000EDDF9C /* HanRiverIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 26242F512572A01000EDDF9C /* HanRiverIOS.xcdatamodeld */; };
+		26242F552572A30800EDDF9C /* HanRiverStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26242F542572A30800EDDF9C /* HanRiverStore.swift */; };
+		26242F582572A7AC00EDDF9C /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26242F572572A7AC00EDDF9C /* URLSession.swift */; };
+		267B84772567C64C00D424AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B84762567C64C00D424AE /* AppDelegate.swift */; };
+		267B84792567C64C00D424AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B84782567C64C00D424AE /* SceneDelegate.swift */; };
+		267B847B2567C64C00D424AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B847A2567C64C00D424AE /* ContentView.swift */; };
+		267B847D2567C64D00D424AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267B847C2567C64D00D424AE /* Assets.xcassets */; };
+		267B84802567C64D00D424AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267B847F2567C64D00D424AE /* Preview Assets.xcassets */; };
+		267B84832567C64D00D424AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B84812567C64D00D424AE /* LaunchScreen.storyboard */; };
+		267B848D256A90BC00D424AE /* HanRiverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848C256A90BC00D424AE /* HanRiverService.swift */; };
+		267B848F256A962F00D424AE /* HanRiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848E256A962F00D424AE /* HanRiver.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		26242F522572A01000EDDF9C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		26242F542572A30800EDDF9C /* HanRiverStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiverStore.swift; sourceTree = "<group>"; };
+		26242F572572A7AC00EDDF9C /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		267B84732567C64C00D424AE /* HanRiverIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanRiverIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		267B84762567C64C00D424AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		267B84782567C64C00D424AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		267B847A2567C64C00D424AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		267B847C2567C64D00D424AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		267B847F2567C64D00D424AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		267B84822567C64D00D424AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		267B84842567C64D00D424AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267B848C256A90BC00D424AE /* HanRiverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiverService.swift; sourceTree = "<group>"; };
+		267B848E256A962F00D424AE /* HanRiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiver.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		267B84702567C64C00D424AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26242F502572939B00EDDF9C /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				267B847A2567C64C00D424AE /* ContentView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		26242F562572A77600EDDF9C /* Context */ = {
+			isa = PBXGroup;
+			children = (
+				26242F572572A7AC00EDDF9C /* URLSession.swift */,
+			);
+			path = Context;
+			sourceTree = "<group>";
+		};
+		267B846A2567C64C00D424AE = {
+			isa = PBXGroup;
+			children = (
+				267B84752567C64C00D424AE /* HanRiverIOS */,
+				267B84742567C64C00D424AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		267B84742567C64C00D424AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				267B84732567C64C00D424AE /* HanRiverIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		267B84752567C64C00D424AE /* HanRiverIOS */ = {
+			isa = PBXGroup;
+			children = (
+				26242F562572A77600EDDF9C /* Context */,
+				26242F502572939B00EDDF9C /* Scene */,
+				267B848B256A908000D424AE /* Model */,
+				267B848A256A906900D424AE /* Services */,
+				267B84762567C64C00D424AE /* AppDelegate.swift */,
+				26242F512572A01000EDDF9C /* HanRiverIOS.xcdatamodeld */,
+				267B84782567C64C00D424AE /* SceneDelegate.swift */,
+				267B847C2567C64D00D424AE /* Assets.xcassets */,
+				267B84812567C64D00D424AE /* LaunchScreen.storyboard */,
+				267B84842567C64D00D424AE /* Info.plist */,
+				267B847E2567C64D00D424AE /* Preview Content */,
+			);
+			path = HanRiverIOS;
+			sourceTree = "<group>";
+		};
+		267B847E2567C64D00D424AE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				267B847F2567C64D00D424AE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		267B848A256A906900D424AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				267B848C256A90BC00D424AE /* HanRiverService.swift */,
+				26242F542572A30800EDDF9C /* HanRiverStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		267B848B256A908000D424AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				267B848E256A962F00D424AE /* HanRiver.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		267B84722567C64C00D424AE /* HanRiverIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267B84872567C64D00D424AE /* Build configuration list for PBXNativeTarget "HanRiverIOS" */;
+			buildPhases = (
+				267B846F2567C64C00D424AE /* Sources */,
+				267B84702567C64C00D424AE /* Frameworks */,
+				267B84712567C64C00D424AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HanRiverIOS;
+			productName = HanRiverIOS;
+			productReference = 267B84732567C64C00D424AE /* HanRiverIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		267B846B2567C64C00D424AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = pparkst;
+				TargetAttributes = {
+					267B84722567C64C00D424AE = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 267B846E2567C64C00D424AE /* Build configuration list for PBXProject "HanRiverIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 267B846A2567C64C00D424AE;
+			productRefGroup = 267B84742567C64C00D424AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				267B84722567C64C00D424AE /* HanRiverIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		267B84712567C64C00D424AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267B84832567C64D00D424AE /* LaunchScreen.storyboard in Resources */,
+				267B84802567C64D00D424AE /* Preview Assets.xcassets in Resources */,
+				267B847D2567C64D00D424AE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		267B846F2567C64C00D424AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267B84772567C64C00D424AE /* AppDelegate.swift in Sources */,
+				267B848F256A962F00D424AE /* HanRiver.swift in Sources */,
+				26242F582572A7AC00EDDF9C /* URLSession.swift in Sources */,
+				267B848D256A90BC00D424AE /* HanRiverService.swift in Sources */,
+				26242F552572A30800EDDF9C /* HanRiverStore.swift in Sources */,
+				267B84792567C64C00D424AE /* SceneDelegate.swift in Sources */,
+				267B847B2567C64C00D424AE /* ContentView.swift in Sources */,
+				26242F532572A01000EDDF9C /* HanRiverIOS.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		267B84812567C64D00D424AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				267B84822567C64D00D424AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		267B84852567C64D00D424AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		267B84862567C64D00D424AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		267B84882567C64D00D424AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HanRiverIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = G7868Z89RY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HanRiverIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pparkst.HanRiverIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		267B84892567C64D00D424AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HanRiverIOS/Preview Content\"";
+				DEVELOPMENT_TEAM = G7868Z89RY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HanRiverIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.pparkst.HanRiverIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		267B846E2567C64C00D424AE /* Build configuration list for PBXProject "HanRiverIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267B84852567C64D00D424AE /* Debug */,
+				267B84862567C64D00D424AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267B84872567C64D00D424AE /* Build configuration list for PBXNativeTarget "HanRiverIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267B84882567C64D00D424AE /* Debug */,
+				267B84892567C64D00D424AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		26242F512572A01000EDDF9C /* HanRiverIOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				26242F522572A01000EDDF9C /* Model.xcdatamodel */,
+			);
+			currentVersion = 26242F522572A01000EDDF9C /* Model.xcdatamodel */;
+			path = HanRiverIOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 267B846B2567C64C00D424AE /* Project object */;
+}
