@@ -13,9 +13,19 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(store.hanRiverInfo.temperature)")
-                .font(.headline)
+            Image("korea_hanRiver_4")
+            .resizable()
+                .aspectRatio(contentMode: .fill)
+                .edgesIgnoringSafeArea(.all)
+                .overlay(
+                    Text("\(store.hanRiverInfo.temperature) ℃")
+                        .font(.system(size: 60))
+            )
+            
+            
         }
+            
+        
         .onAppear(perform: store.loadData)
     }
 }
