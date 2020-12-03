@@ -63,6 +63,13 @@
 			path = Context;
 			sourceTree = "<group>";
 		};
+		26242F5E25790CB200EDDF9C /* img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		267B846A2567C64C00D424AE = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +89,7 @@
 		267B84752567C64C00D424AE /* HanRiverIOS */ = {
 			isa = PBXGroup;
 			children = (
+				26242F5E25790CB200EDDF9C /* img */,
 				26242F562572A77600EDDF9C /* Context */,
 				26242F502572939B00EDDF9C /* Scene */,
 				267B848B256A908000D424AE /* Model */,
