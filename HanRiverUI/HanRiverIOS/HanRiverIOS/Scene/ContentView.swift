@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: HanRiverStore
-
+    @State private var coffee: Bool = true
     var body: some View {
         VStack(alignment: .leading) {
             Image("korea_hanRiver_4")
@@ -18,14 +18,14 @@ struct ContentView: View {
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
-                    Text("\(store.hanRiverInfo.temperature) ℃")
-                        .font(.system(size: 60))
+                    EmitterView()
+                        .overlay(
+                            Text("\(store.hanRiverInfo.temperature) ℃")
+                            .font(.system(size: 60))
+                    )
             )
             
-            
         }
-            
-        
         .onAppear(perform: store.loadData)
     }
 }
@@ -36,4 +36,6 @@ struct ContentView_Previews: PreviewProvider {
         .environmentObject(HanRiverStore())
     }
 }
+
+
 
