@@ -19,6 +19,7 @@
 		267B848D256A90BC00D424AE /* HanRiverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848C256A90BC00D424AE /* HanRiverService.swift */; };
 		267B848F256A962F00D424AE /* HanRiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848E256A962F00D424AE /* HanRiver.swift */; };
 		26AF3CC225792C34006095C8 /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF3CC125792C34006095C8 /* EmitterView.swift */; };
+		26C3D416257BD5C80001F392 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3D415257BD5C80001F392 /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		267B848C256A90BC00D424AE /* HanRiverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiverService.swift; sourceTree = "<group>"; };
 		267B848E256A962F00D424AE /* HanRiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiver.swift; sourceTree = "<group>"; };
 		26AF3CC125792C34006095C8 /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
+		26C3D415257BD5C80001F392 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				267B848C256A90BC00D424AE /* HanRiverService.swift */,
 				26242F542572A30800EDDF9C /* HanRiverStore.swift */,
+				26C3D415257BD5C80001F392 /* LocalNotificationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				267B84772567C64C00D424AE /* AppDelegate.swift in Sources */,
 				267B848F256A962F00D424AE /* HanRiver.swift in Sources */,
+				26C3D416257BD5C80001F392 /* LocalNotificationManager.swift in Sources */,
 				26242F582572A7AC00EDDF9C /* URLSession.swift in Sources */,
 				267B848D256A90BC00D424AE /* HanRiverService.swift in Sources */,
 				26242F552572A30800EDDF9C /* HanRiverStore.swift in Sources */,

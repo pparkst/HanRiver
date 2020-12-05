@@ -23,7 +23,7 @@ struct EmitterView: UIViewRepresentable {
 //        particlesLayer.backgroundColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0).cgColor
         
         particlesLayer.emitterShape = .line
-        particlesLayer.emitterPosition = CGPoint(x: -50.0, y: -50.0)
+        particlesLayer.emitterPosition = CGPoint(x: -30.0, y: 0.0)
         //particlesLayer.emitterPosition = CGPoint(x: 0, y: 0)
         particlesLayer.emitterSize = CGSize(width: 1648.0, height: 1112.0)
         particlesLayer.emitterMode = .surface
@@ -31,7 +31,7 @@ struct EmitterView: UIViewRepresentable {
 
 
 
-        let image1 = UIImage(named: "ice")?.cgImage
+        let image1 = UIImage(named: "ice2")?.cgImage
 
         let cell1 = CAEmitterCell()
         cell1.contents = image1

@@ -16,7 +16,7 @@ class HanRiverStore: ObservableObject {
     }
     
     func loadData() {
-        guard let url = URL(string: "\("http://localhost:9090/hanRiverById/29")") else {
+        guard let url = URL(string: "\("http://localhost:9090/hanRiverFindLatest")") else {
             print("Invalid URL")
             return
         }
@@ -27,6 +27,7 @@ class HanRiverStore: ObservableObject {
             if let data = data {
                 if let decodedResponse = try? JSONDecoder().decode(HanRiverInfo.self, from: data) {
                     print(decodedResponse.name)
+                    print(decodedResponse.temperature)
                     DispatchQueue.main.async {
                         self.hanRiverInfo = decodedResponse
                     }
