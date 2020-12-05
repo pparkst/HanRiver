@@ -11,20 +11,36 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var store: HanRiverStore
     @State private var coffee: Bool = true
+    
+    func setNotification() {
+        let manager = LocalNotificationManager()
+        manager.addNotification(title: "This is a test reminder")
+        manager.schedule()
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Image("korea_hanRiver_4")
+            Image("backGround")
             .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
                     EmitterView()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
                         .overlay(
-                            Text("\(store.hanRiverInfo.temperature) ℃")
+                            //Text("\(store.hanRiverInfo.temperature) ℃")
+                           (Text(String(format: "%.1f", (store.hanRiverInfo.temperature)))
                             .font(.system(size: 60))
-                    )
+                            + //Text(" ℃").font(.system(size: 40)))
+                            Text(" ℃").font(.system(size: 40)))
+                            .offset(x:10, y:-150)
+                        ).overlay(
+                            Button(action: { self.setNotification() }){
+                                Text("SET Notification!")
+                            }.offset(x:0, y:370)
+                        )
             )
-            
         }
         .onAppear(perform: store.loadData)
     }
