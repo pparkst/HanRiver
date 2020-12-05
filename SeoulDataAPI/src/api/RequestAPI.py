@@ -46,9 +46,13 @@ def run():
     query = 'xml/WPOSInformationTime/1/5/%s' % nowDate
     
     result = requstAPI(query, '', 'GET')
-    print(result)
+    #print(result)
     data = dataFormat(result)
-    result_Code = data['WPOSInformationTime']['RESULT']['CODE']
+    result_Code = ''
+    print(data)
+
+    if 'WPOSInformationTime' in data:
+        result_Code = data['WPOSInformationTime']['RESULT']['CODE']
 
     if result_Code == 'INFO-000':
         print(data['WPOSInformationTime']['row'][4]['W_TEMP'])
