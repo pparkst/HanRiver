@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var store: HanRiverStore
     @State private var coffee: Bool = true
+    @State private var overlayOpacity: Double = 0.0
     
     func setNotification() {
         let manager = LocalNotificationManager()
@@ -22,7 +23,7 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             Image("backGround")
             .resizable()
-                .aspectRatio(contentMode: .fill)
+                //.aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
                     EmitterView()
@@ -41,7 +42,10 @@ struct ContentView: View {
                             }.offset(x:0, y:370)
                         )
             )
-        }
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black)
+        .transition(.move(edge: .bottom))
+            .animation(.spring())
         .onAppear(perform: store.loadData)
     }
 }

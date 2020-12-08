@@ -13,6 +13,7 @@ struct SplashView: View {
     
     @State var isActivate: Bool = false
     
+    
     var body: some View {
         VStack {
             
@@ -23,6 +24,7 @@ struct SplashView: View {
                 .font(Font.largeTitle)
             }
         }
+        .transition(.opacity)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
                 withAnimation {
