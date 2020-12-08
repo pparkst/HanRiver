@@ -22,11 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let hanRiverStore = HanRiverStore()
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView().environment(\.managedObjectContext, context).environmentObject(hanRiverStore)
+        
+        let splashView = SplashView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: splashView)
             self.window = window
             window.makeKeyAndVisible()
         }

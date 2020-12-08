@@ -20,6 +20,7 @@
 		267B848F256A962F00D424AE /* HanRiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B848E256A962F00D424AE /* HanRiver.swift */; };
 		26AF3CC225792C34006095C8 /* EmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF3CC125792C34006095C8 /* EmitterView.swift */; };
 		26C3D416257BD5C80001F392 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3D415257BD5C80001F392 /* LocalNotificationManager.swift */; };
+		26C3D418257FC7D10001F392 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C3D417257FC7D10001F392 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		267B848E256A962F00D424AE /* HanRiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanRiver.swift; sourceTree = "<group>"; };
 		26AF3CC125792C34006095C8 /* EmitterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterView.swift; sourceTree = "<group>"; };
 		26C3D415257BD5C80001F392 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		26C3D417257FC7D10001F392 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				267B847A2567C64C00D424AE /* ContentView.swift */,
 				26AF3CC125792C34006095C8 /* EmitterView.swift */,
+				26C3D417257FC7D10001F392 /* SplashView.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				267B84772567C64C00D424AE /* AppDelegate.swift in Sources */,
+				26C3D418257FC7D10001F392 /* SplashView.swift in Sources */,
 				267B848F256A962F00D424AE /* HanRiver.swift in Sources */,
 				26C3D416257BD5C80001F392 /* LocalNotificationManager.swift in Sources */,
 				26242F582572A7AC00EDDF9C /* URLSession.swift in Sources */,
