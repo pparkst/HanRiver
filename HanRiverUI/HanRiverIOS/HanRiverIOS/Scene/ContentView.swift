@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: HanRiverStore
-    @State private var coffee: Bool = true
+    @State private var isActivate: Bool = true
     @State private var overlayOpacity: Double = 0.0
     
     func setNotification() {
@@ -38,14 +38,19 @@ struct ContentView: View {
                             .offset(x:10, y:-150)
                         ).overlay(
                             Button(action: { self.setNotification() }){
-                                Text("SET Notification!")
+                                //Text("SET Notification!")
                             }.offset(x:0, y:370)
                         )
             )
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
-        .transition(.move(edge: .bottom))
-            .animation(.spring())
+        //.opacity(0.2)
+        .animation(.easeInOut(duration: 2.0))
+        //.transition(.move(edge: .bottom))
+            //.animation(.spring())
+        //.transition(.scale)
+        //.animation(Animation.spring().delay(0.4))
+        
         .onAppear(perform: store.loadData)
     }
 }

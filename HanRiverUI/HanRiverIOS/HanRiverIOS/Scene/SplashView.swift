@@ -19,18 +19,37 @@ struct SplashView: View {
             
             if self.isActivate {
                 ContentView().environmentObject(HanRiverStore())
+                    //.animation(Animation.easeOut.delay(0.5))
+                
             }else {
-                Text("Loading App")
-                .font(Font.largeTitle)
+                
+                Image("logo3")
+                    .resizable()
+                    .clipShape(Circle())
+                    .frame(width:100, height: 100)
+                    
+
+                    
+                Text("Han ℃")
+                .font(Font.largeTitle)    
+                .foregroundColor(.white)
             }
         }
-        .transition(.opacity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.blue.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/))
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 withAnimation {
                     self.isActivate = true
                 }
             }
         }
+    }
+}
+
+
+struct SplashView_Previews: PreviewProvider {
+    static var previews: some View {
+        SplashView()
     }
 }
