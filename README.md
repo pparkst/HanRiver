@@ -4,7 +4,8 @@
    db - rds mysql 8.0v   
    mysqlclient 1.3.10v   
    urllib3 1.25v   
-   xmltodict 0.12   
+   xmltodict 0.12
+   colorama
    
 #SeoulDataREST   
       
