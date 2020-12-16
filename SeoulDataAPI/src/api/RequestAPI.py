@@ -35,25 +35,17 @@ def dataFormat(result_API):
     return dict2_type
 
 def setEntity(data):
-        print('--------------')
-        print(len(data['WPOSInformationTime']['row']))
-        print('--------------')
-
         entityList = []
 
         for row in data['WPOSInformationTime']['row']:
-                entity = { 'key': utill.riverStrKey.getRiverStrKey(row['SITE_ID']).value,
-                'name': "'%s'" % row['SITE_ID'], 
-                'temperature': row['W_TEMP'],
-                'time': row['MSR_TIME'],
-                "created" : "sysdate()" }
-                
+                entity = { 'type': utill.riverStrKey.getRiverStrKey(row['SITE_ID']).value,
+                'name': "%s" % row['SITE_ID'], 
+                'temperature': float(row['W_TEMP']),
+                'time': datetime.datetime.now().strftime('%Y-%m-%d ') + row['MSR_TIME']
+               }
+
                 entityList.append(entity)
 
-        # entity= { 'name': "'%s'" % data['WPOSInformationTime']['row'][4]['SITE_ID'], 
-        #         'temperature': data['WPOSInformationTime']['row'][4]['W_TEMP'],
-        #         'time': data['WPOSInformationTime']['row'][4]['MSR_TIME'],
-        #         "created" : "sysdate()" }
         return entityList
 
 def run():
@@ -63,10 +55,8 @@ def run():
     query = 'xml/WPOSInformationTime/1/5/%s' % nowDate
     
     result = requstAPI(query, '', 'GET')
-    #print(result)
     data = dataFormat(result)
     result_Code = ''
-    #print(data)
 
     if 'WPOSInformationTime' in data:
         result_Code = data['WPOSInformationTime']['RESULT']['CODE']
@@ -82,10 +72,7 @@ def run():
         if beforeApiRequestTime != newApiRequestTime:
                 beforeApiRequestTime = newApiRequestTime
                 entityList = setEntity(data)
-
-                for x in entityList:
-                        print(x)
-                #dbcon.InsertHanRiverData(entity)
+                dbcon.InsertHanRiverData(entityList)
     timer = threading.Timer(300, run)
     timer.start()
 
