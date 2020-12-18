@@ -1,7 +1,7 @@
 import urllib3
 import json
 import xmltodict
-import datetime
+from datetime import datetime, timedelta
 import threading
 import os
 import sys
@@ -41,7 +41,7 @@ def setEntity(data):
                 entity = { 'type': utill.riverStrKey.getRiverStrKey(row['SITE_ID']).value,
                 'name': "%s" % row['SITE_ID'], 
                 'temperature': float(row['W_TEMP']),
-                'time': datetime.datetime.now().strftime('%Y-%m-%d ') + row['MSR_TIME']
+                'time': datetime.now().strftime('%Y-%m-%d ') + '00:00' if row['MSR_TIME'] == '24:00' else row['MSR_TIME']
                }
 
                 entityList.append(entity)
@@ -50,7 +50,11 @@ def setEntity(data):
 
 def run():
     global beforeApiRequestTime
-    now = datetime.datetime.now()
+    now = datetime.now()
+
+    if now.strftime('%H') == '00':
+            now += timedelta(days=-1)
+
     nowDate = now.strftime('%Y%m%d')
     query = 'xml/WPOSInformationTime/1/5/%s' % nowDate
     
@@ -68,6 +72,7 @@ def run():
         entityList = setEntity(data)
         for x in entityList:
                 print(x)
+        print('')
 
         if beforeApiRequestTime != newApiRequestTime:
                 beforeApiRequestTime = newApiRequestTime
