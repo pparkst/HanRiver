@@ -34,7 +34,7 @@ public class HanRiverController {
     }
 
     @GetMapping("/hanRiverFindLatest")
-    public HanRiver findHanRiverTopData()
+    public List<HanRiver> findHanRiverTopData()
     {
         return service.getHanRiverLatestData();
     }

@@ -28,7 +28,7 @@ public class HanRiverService {
         return repository.findByName(name);
     }
 
-    public HanRiver getHanRiverLatestData()
+    public List<HanRiver> getHanRiverLatestData()
     {
         return repository.findLatestData();
     }
