@@ -9,10 +9,10 @@
 import Foundation
 
 class HanRiverStore: ObservableObject {
-    @Published var hanRiverInfo: HanRiverInfo
+    @Published var hanRiverInfo: [HanRiverInfo]
     
     init() {
-        hanRiverInfo = HanRiverInfo()
+        hanRiverInfo = [HanRiverInfo()]
     }
     
     func loadData() {
@@ -25,9 +25,9 @@ class HanRiverStore: ObservableObject {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
-                if let decodedResponse = try? JSONDecoder().decode(HanRiverInfo.self, from: data) {
-                    print(decodedResponse.name)
-                    print(decodedResponse.temperature)
+                if let decodedResponse = try? JSONDecoder().decode([HanRiverInfo].self, from: data) {
+                    print(decodedResponse[0].name)
+                    print(decodedResponse[0].temperature)
                     DispatchQueue.main.async {
                         self.hanRiverInfo = decodedResponse
                     }
