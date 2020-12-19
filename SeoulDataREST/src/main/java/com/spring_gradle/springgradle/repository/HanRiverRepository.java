@@ -28,7 +28,7 @@ public interface HanRiverRepository extends JpaRepository<HanRiver,Long>
                                  "(SELECT @row_num \\:= 1) x, \r" +
                                  "(SELECT @prev_value \\:= '') y \r" +
                                  "ORDER BY o.time DESC, o.created DESC )AS TBL \r" + 
-                                 "WHERE RowNumber < 6 LIMIT 5 )T ORDER BY type ASC;", nativeQuery = true)
+                                 "WHERE RowNumber < 6 LIMIT 5 )T ORDER BY type DESC;", nativeQuery = true)
     List<HanRiver> findLatestData();
 
 }
