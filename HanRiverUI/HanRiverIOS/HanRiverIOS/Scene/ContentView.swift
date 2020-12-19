@@ -30,13 +30,20 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fill)
                         .edgesIgnoringSafeArea(.all)
                         .overlay(
-                            //Text("\(store.hanRiverInfo.temperature) ℃")
-                           (Text(String(format: "%.1f", (store.hanRiverInfo.temperature)))
-                            .font(.system(size: 60))
-                            + //Text(" ℃").font(.system(size: 40)))
-                            Text(" ℃").font(.system(size: 40)))
-                            .offset(x:10, y:-150)
-                        ).overlay(
+                                ForEach(store.hanRiverInfo) { row in
+                                    (Text(row.name + String(format: "  %.1f", (row.temperature)))
+                                     .font(.system(size: 60))
+                                     +
+                                        Text(" ℃").font(.system(size: 40)))
+                                        //.background(Rectangle().stroke())
+                                        .padding([.bottom], 20)
+                                        .offset(x:10, y:250)
+                            }
+                            .frame(width: UIScreen.main.bounds.width,
+                                        height: UIScreen.main.bounds.height
+                                        )
+                        )
+                        .padding(.bottom, 200).overlay(
                             Button(action: { self.setNotification() }){
                                 //Text("SET Notification!")
                             }.offset(x:0, y:370)
@@ -45,7 +52,7 @@ struct ContentView: View {
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.black)
         //.opacity(0.2)
-        .animation(.easeInOut(duration: 2.0))
+        .animation(.easeInOut(duration: 1.0))
         //.transition(.move(edge: .bottom))
             //.animation(.spring())
         //.transition(.scale)
