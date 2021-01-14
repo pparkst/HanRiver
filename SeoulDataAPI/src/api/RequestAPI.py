@@ -1,12 +1,13 @@
 import urllib3
 import json
 import xmltodict
-import datetime
+from datetime import datetime, timedelta
 import threading
 import os
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))))
 import database.dbcon as dbcon
+import src.common.utill as utill
 
 
 #http://openapi.seoul.go.kr:8088/516a4461797070613539644b544c55/xml/WPOSInformationTime/1/5/20201106
@@ -34,34 +35,49 @@ def dataFormat(result_API):
     return dict2_type
 
 def setEntity(data):
-        entity= { 'name': "'%s'" % data['WPOSInformationTime']['row'][4]['SITE_ID'], 
-                'temperature': data['WPOSInformationTime']['row'][4]['W_TEMP'], 
-                "created" : "sysdate()" }
-        return entity
+        entityList = []
+
+        for row in data['WPOSInformationTime']['row']:
+                entity = { 'type': utill.riverStrKey.getRiverStrKey(row['SITE_ID']).value,
+                'name': "%s" % row['SITE_ID'], 
+                'temperature': float(row['W_TEMP']),
+                'time': datetime.now().strftime('%Y-%m-%d ') + '00:00' if row['MSR_TIME'] == '24:00' else row['MSR_TIME']
+               }
+
+                entityList.append(entity)
+
+        return entityList
 
 def run():
     global beforeApiRequestTime
-    now = datetime.datetime.now()
+    now = datetime.now()
+
+    if now.strftime('%H') == '00':
+            now += timedelta(days=-1)
+
     nowDate = now.strftime('%Y%m%d')
     query = 'xml/WPOSInformationTime/1/5/%s' % nowDate
     
     result = requstAPI(query, '', 'GET')
-    #print(result)
     data = dataFormat(result)
     result_Code = ''
-    print(data)
 
     if 'WPOSInformationTime' in data:
         result_Code = data['WPOSInformationTime']['RESULT']['CODE']
 
     if result_Code == 'INFO-000':
-        print(data['WPOSInformationTime']['row'][4]['W_TEMP'])
+        #print(data['WPOSInformationTime']['row'][4]['W_TEMP'])
         newApiRequestTime = str(data['WPOSInformationTime']['row'][4]['MSR_TIME'])
+
+        entityList = setEntity(data)
+        for x in entityList:
+                print(x)
+        print('')
 
         if beforeApiRequestTime != newApiRequestTime:
                 beforeApiRequestTime = newApiRequestTime
-                entity = setEntity(data)
-                dbcon.InsertHanRiverData(entity)
+                entityList = setEntity(data)
+                dbcon.InsertHanRiverData(entityList)
     timer = threading.Timer(300, run)
     timer.start()
 

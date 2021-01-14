@@ -1,20 +1,24 @@
-#SeoulDataAPI   
+# SeoulDataAPI
++  Python, AWS RDS MySQL로 서울데이터광장에서 데이터 받아와 저장구현
++ use
+   + python v3.6.12   
+   + db - rds mysql v8.0   
+   + mysqlclient v1.3.10   
+   + urllib3 v1.25   
+   + xmltodict v0.12
+   + colorama
    
-   python 3.6.12v   
-   db - rds mysql 8.0v   
-   mysqlclient 1.3.10v   
-   urllib3 1.25v   
-   xmltodict 0.12   
-   
-#SeoulDataREST   
-      
-   java 8v   
-   spring-boot 2.3v   
-   gradle 6v   
-   db - rds mysql 8.0v   
-   jpa   
+# SeoulDataREST   
++ Java, AWS RDS MySQL로 저장한 데이터를 반환하는 RESTAPI 구현
++ use
+   + java v8   
+   + spring-boot v2.3   
+   + gradle v6   
+   + db - rds mysql v8.0   
+   + jpa   
 
-#HanRiverUI/HanRiverIOS
-
-   SwiftUI
+# HanRiverUI/HanRiverIOS
++ SwiftUI로 Java RESTAPI에서 받아온 데이터를 보여주는 UI구현
++ use
+   + SwiftUI
    

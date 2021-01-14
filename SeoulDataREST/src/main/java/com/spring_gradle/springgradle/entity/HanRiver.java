@@ -1,5 +1,6 @@
 package com.spring_gradle.springgradle.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -13,8 +14,10 @@ public class HanRiver {
     @Id
     @GeneratedValue
     private int no_;
+    private int type;
     private String name;
     private float temperature;
+    private LocalDateTime time;
     private LocalDateTime created;
 
     public int getNo_() {
@@ -23,6 +26,14 @@ public class HanRiver {
 
     public void setNo_(int no_) {
         this.no_ = no_;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getName() {
@@ -39,6 +50,14 @@ public class HanRiver {
 
     public void setTemperature(float temperature) {
         this.temperature = temperature;
+    }
+
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
     }
 
     public LocalDateTime getCreated() {
